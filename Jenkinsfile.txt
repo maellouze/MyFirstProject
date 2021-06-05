@@ -1,0 +1,13 @@
+node {
+   stage('Clone') {
+       git branch: 'main', url: 'https://github.com/maellouze/MyFirstProject.git'
+ bat label: '', script: 'echo "this is the first stage"'
+   
+}
+   stage('Build') {
+     bat label: '', script: 'echo "this is the second stage"'
+}
+   stage('Run') {
+   bat label: '', script: 'echo "this is the third stage"'
+}
+}
